@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects - Helen Yu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fractals.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/fractals.js"></script>
+  <script language="javascript" src="JS/animations.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Helen Yu </a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="index.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; min-height: 100vh;">
+      <canvas id="fractalCanvas"> </canvas>
+      
+      <div class="container" style="padding-top: 15%; max-width: 1000px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <div class="Hello" style="text-align: center;"> Projects </div>
+          <div id="Name" style="font-size: 3em; text-align: center;"> Current Work </div>
+        </div>
+        
+        <div style="margin-bottom: 50px;">
+          <div class="project-item" style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px; border: 1px solid rgba(138, 43, 226, 0.3);">
+            <h3 style="color: white; margin-bottom: 15px; font-size: 1.8em;">Interactive Fractal Generator</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              A web-based tool for exploring mathematical fractals with real-time interaction. 
+              Users can manipulate parameters to create unique patterns and explore the infinite complexity 
+              of fractal geometry.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">JavaScript</span>
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">Canvas API</span>
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">WebGL</span>
+            </div>
+            <div style="color: #666; font-size: 0.9em;">
+              Status: In Development
+            </div>
+          </div>
+          
+          <div class="project-item" style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px; border: 1px solid rgba(138, 43, 226, 0.3);">
+            <h3 style="color: white; margin-bottom: 15px; font-size: 1.8em;">Generative Art Collection</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              An ongoing series of algorithmic artworks that explore the intersection of mathematics 
+              and aesthetics. Each piece is generated using custom algorithms that create unique, 
+              never-to-be-repeated visual experiences.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">Processing</span>
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">p5.js</span>
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">Creative Coding</span>
+            </div>
+            <div style="color: #666; font-size: 0.9em;">
+              Status: Active Project
+            </div>
+          </div>
+          
+          <div class="project-item" style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px; border: 1px solid rgba(138, 43, 226, 0.3);">
+            <h3 style="color: white; margin-bottom: 15px; font-size: 1.8em;">Fractal-based Design System</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              A comprehensive design framework based on fractal principles. This project aims to create 
+              scalable, self-similar design patterns that can be applied across various media while 
+              maintaining visual consistency and aesthetic harmony.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">Design Theory</span>
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">UI/UX</span>
+              <span style="background: rgba(138, 43, 226, 0.2); color: #aebcb9; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;">CSS/Sass</span>
+            </div>
+            <div style="color: #666; font-size: 0.9em;">
+              Status: Research Phase
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: rgba(21, 21, 21, 0.8); border-radius: 15px;">
+          <h3 style="color: white; margin-bottom: 15px;">Collaboration & Contact</h3>
+          <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+            I'm always interested in collaborating on innovative projects that blend art, technology, and mathematics. 
+            If you have an idea or would like to work together, I'd love to hear from you.
+          </p>
+          <div style="margin-top: 30px;">
+            <canvas id="contactFractal" width="200" height="100" style="margin: 0 auto; display: block;"></canvas>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+          <div style="color: #666; font-size: 0.9em;">
+            <p>© 2026 Helen Yu | Designed with passion and fractals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simple contact fractal
+      function drawContactFractal() {
+        const canvas = document.getElementById('contactFractal');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        let time = 0;
+        
+        function draw() {
+          time += 0.02;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          
+          // Draw pulsing circles
+          for (let i = 0; i < 5; i++) {
+            const x = (canvas.width / 6) * (i + 1);
+            const y = canvas.height / 2;
+            const radius = 10 + Math.sin(time + i * 0.5) * 5;
+            
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = `hsla(${260 + i * 20}, 70%, 50%, 0.6)`;
+            ctx.fill();
+            
+            // Connect with lines
+            if (i > 0) {
+              ctx.beginPath();
+              ctx.moveTo(x - (canvas.width / 6), y);
+              ctx.lineTo(x, y);
+              ctx.strokeStyle = `hsla(${270}, 60%, 60%, 0.3)`;
+              ctx.stroke();
+            }
+          }
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      // Initialize when page loads
+      window.addEventListener('load', drawContactFractal);
+    </script>
+</body> 
+</html>

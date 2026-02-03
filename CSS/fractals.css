@@ -1,0 +1,129 @@
+/* Fractal Background Canvas */
+#fractalCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Interactive Fractal Container */
+#fractalContainer {
+  animation: fractalPulse 4s ease-in-out infinite;
+}
+
+@keyframes fractalPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Fractal-inspired geometric patterns */
+.fractal-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(75, 0, 130, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  animation: fractalRotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fractalRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Fractal tree inspired borders */
+.fractal-border {
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(45deg, #8a2be2, #4b0082, #8a2be2, #4b0082),
+    linear-gradient(-45deg, #8a2be2, #4b0082, #8a2be2, #4b0082);
+  background-size: 200% 200%, 200% 200%;
+  animation: fractalBorder 3s ease infinite;
+}
+
+@keyframes fractalBorder {
+  0% { background-position: 0% 50%, 100% 50%; }
+  50% { background-position: 100% 50%, 0% 50%; }
+  100% { background-position: 0% 50%, 100% 50%; }
+}
+
+/* Mandelbrot-inspired color scheme */
+.fractal-mandelbrot {
+  background: linear-gradient(
+    135deg,
+    #1a0033 0%,
+    #330066 20%,
+    #4d0099 40%,
+    #6600cc 60%,
+    #7f00ff 80%,
+    #9933ff 100%
+  );
+}
+
+/* Julia set inspired patterns */
+.fractal-julia {
+  position: relative;
+  overflow: hidden;
+}
+
+.fractal-julia::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(138, 43, 226, 0.1),
+    rgba(75, 0, 130, 0.2),
+    rgba(255, 255, 255, 0.1),
+    rgba(138, 43, 226, 0.1)
+  );
+  animation: juliaRotate 10s linear infinite;
+}
+
+@keyframes juliaRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Sierpinski triangle inspired layout */
+.sierpinski-layout {
+  position: relative;
+}
+
+.sierpinski-triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 43px solid rgba(138, 43, 226, 0.3);
+  margin: 20px auto;
+  filter: blur(1px);
+}
+
+/* Fractal glow effects */
+.fractal-glow {
+  box-shadow: 
+    0 0 20px rgba(138, 43, 226, 0.5),
+    0 0 40px rgba(75, 0, 130, 0.3),
+    0 0 60px rgba(138, 43, 226, 0.2),
+    0 0 80px rgba(75, 0, 130, 0.1);
+}
+
+/* Koch snowflake inspired borders */
+.koch-border {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #8a2be2, #4b0082) 1;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+}

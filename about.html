@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Helen Yu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fractals.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/fractals.js"></script>
+  <script language="javascript" src="JS/animations.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Helen Yu </a>
+      <a href="about.html" class="active">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; min-height: 100vh;">
+      <canvas id="fractalCanvas"> </canvas>
+      
+      <div class="container" style="padding-top: 15%;">
+        <div id="left" style="flex: 1; max-width: 600px;">
+          <div class="Hello"> About Me </div>
+          
+          <div style="color: white; font-size: 1.2em; line-height: 1.6em; margin-bottom: 30px;">
+            I'm a passionate designer and creator with a love for innovative digital experiences. 
+            My work combines artistic vision with technical expertise to create beautiful, functional designs.
+          </div>
+          
+          <div style="color: #aebcb9; font-size: 1.1em; line-height: 1.6em; margin-bottom: 20px;">
+            <h3 style="color: white; margin-bottom: 15px;">Expertise</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 10px;">✦ Creative Design & Visual Arts</li>
+              <li style="margin-bottom: 10px;">✦ Interactive Web Experiences</li>
+              <li style="margin-bottom: 10px;">✦ Fractal Mathematics & Generative Art</li>
+              <li style="margin-bottom: 10px;">✦ User Experience Design</li>
+            </ul>
+          </div>
+          
+          <div style="color: #aebcb9; font-size: 1.1em; line-height: 1.6em;">
+            <h3 style="color: white; margin-bottom: 15px;">Philosophy</h3>
+            I believe in the intersection of art and mathematics, where creativity meets precision. 
+            My designs are inspired by the patterns found in nature and the elegance of fractal geometry.
+          </div>
+        </div>       
+        
+        <div id="right" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+          <div id="fractalContainer" style="width: 400px; height: 400px;">
+            <canvas id="interactiveFractal" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+      
+      <div style="color: #666; text-align: center; padding: 50px 0; font-size: 0.9em;">
+        <p>© 2026 Helen Yu | Designed with passion and fractals</p>
+      </div>
+    </div>
+</body> 
+</html>

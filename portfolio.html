@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio - Helen Yu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fractals.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/fractals.js"></script>
+  <script language="javascript" src="JS/animations.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Helen Yu </a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; min-height: 100vh;">
+      <canvas id="fractalCanvas"> </canvas>
+      
+      <div class="container" style="padding-top: 15%; max-width: 1200px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <div class="Hello" style="text-align: center;"> Portfolio </div>
+          <div id="Name" style="font-size: 3em; text-align: center;"> My Work </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
+          <div class="portfolio-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Fractal Art Series</h3>
+            <p style="color: #aebcb9; line-height: 1.6em;">
+              A collection of generative artworks inspired by mathematical patterns found in nature. 
+              Each piece explores the beauty of recursive algorithms and infinite complexity.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="portfolioFractal1" width="240" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+          </div>
+          
+          <div class="portfolio-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Interactive Web Design</h3>
+            <p style="color: #aebcb9; line-height: 1.6em;">
+              User-centered designs that blend aesthetics with functionality. 
+              Creating memorable digital experiences through thoughtful interaction design.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="portfolioFractal2" width="240" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+          </div>
+          
+          <div class="portfolio-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Visual Identity Systems</h3>
+            <p style="color: #aebcb9; line-height: 1.6em;">
+              Comprehensive brand identities that tell compelling stories. 
+              From logos to complete visual languages, each system is unique and purposeful.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="portfolioFractal3" width="240" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+          <div style="color: #666; font-size: 0.9em;">
+            <p>© 2026 Helen Yu | Designed with passion and fractals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initialize portfolio fractals
+      function initPortfolioFractals() {
+        // Portfolio fractal 1 - Mandelbrot inspired
+        const canvas1 = document.getElementById('portfolioFractal1');
+        if (canvas1) {
+          const ctx1 = canvas1.getContext('2d');
+          drawMiniMandelbrot(ctx1, canvas1.width, canvas1.height);
+        }
+        
+        // Portfolio fractal 2 - Julia set inspired
+        const canvas2 = document.getElementById('portfolioFractal2');
+        if (canvas2) {
+          const ctx2 = canvas2.getContext('2d');
+          drawMiniJulia(ctx2, canvas2.width, canvas2.height);
+        }
+        
+        // Portfolio fractal 3 - Sierpinski inspired
+        const canvas3 = document.getElementById('portfolioFractal3');
+        if (canvas3) {
+          const ctx3 = canvas3.getContext('2d');
+          drawMiniSierpinski(ctx3, canvas3.width, canvas3.height);
+        }
+      }
+      
+      function drawMiniMandelbrot(ctx, width, height) {
+        ctx.fillStyle = '#1a0033';
+        ctx.fillRect(0, 0, width, height);
+        
+        for (let i = 0; i < 100; i++) {
+          const x = Math.random() * width;
+          const y = Math.random() * height;
+          const hue = 260 + Math.random() * 60;
+          const lightness = 40 + Math.random() * 30;
+          
+          ctx.beginPath();
+          ctx.arc(x, y, Math.random() * 3 + 1, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(${hue}, 70%, ${lightness}%, 0.7)`;
+          ctx.fill();
+        }
+      }
+      
+      function drawMiniJulia(ctx, width, height) {
+        const gradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.min(width, height)/2);
+        gradient.addColorStop(0, 'rgba(138, 43, 226, 0.8)');
+        gradient.addColorStop(0.5, 'rgba(75, 0, 130, 0.6)');
+        gradient.addColorStop(1, 'rgba(26, 0, 51, 0.4)');
+        
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+        
+        // Draw spiral pattern
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.lineWidth = 2;
+        
+        for (let angle = 0; angle < Math.PI * 6; angle += 0.1) {
+          const radius = angle * 8;
+          const x = width/2 + Math.cos(angle) * radius;
+          const y = height/2 + Math.sin(angle) * radius;
+          
+          if (angle === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+        ctx.stroke();
+      }
+      
+      function drawMiniSierpinski(ctx, width, height) {
+        ctx.fillStyle = '#0a0015';
+        ctx.fillRect(0, 0, width, height);
+        
+        function drawTriangle(x, y, size, depth) {
+          if (depth === 0) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x - size/2, y + size);
+            ctx.lineTo(x + size/2, y + size);
+            ctx.closePath();
+            
+            const hue = 260 + depth * 20;
+            ctx.fillStyle = `hsla(${hue}, 70%, 50%, 0.6)`;
+            ctx.fill();
+            return;
+          }
+          
+          const newSize = size / 2;
+          drawTriangle(x, y, newSize, depth - 1);
+          drawTriangle(x - newSize/2, y + newSize, newSize, depth - 1);
+          drawTriangle(x + newSize/2, y + newSize, newSize, depth - 1);
+        }
+        
+        drawTriangle(width/2, height/4, Math.min(width, height)/2, 4);
+      }
+      
+      // Initialize when page loads
+      window.addEventListener('load', initPortfolioFractals);
+    </script>
+</body> 
+</html>

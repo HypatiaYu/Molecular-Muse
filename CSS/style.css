@@ -1,0 +1,194 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151515;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  padding-left: 20%;
+  padding-top: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+#left {
+  flex: none;
+}
+
+#right {
+  flex: none;
+}
+
+.Hello {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.55em;
+  text-align: right;
+  text-shadow: 4px 0px 5px rgba(255, 255, 255, 0.3), -4px 0px 5px rgba(255, 255, 255, 0.3), 0px 4px 5px rgba(255, 255, 255, 0.3), 0px -4px 5px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.2);
+}
+
+#Name {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 5em;
+  font-weight: 600;
+  text-align: right;
+  text-shadow: 7px 0px 10px rgba(255, 255, 255, 0.4), -7px 0px 10px rgba(255, 255, 255, 0.4), 0px 7px 10px rgba(255, 255, 255, 0.4), 0px -7px 10px rgba(255, 255, 255, 0.4), 0px 0px 40px rgba(255, 255, 255, 0.3);
+}
+
+#Iam {
+  font-family: "Raleway", sans-serif;
+  color: #aebcb9;
+  font-size: 2.5em;
+  line-height: 1.55em;
+  font-weight: 300;
+  text-align: right;
+  text-shadow: 4px 0px 5px rgba(174, 188, 185, 0.3), -4px 0px 5px rgba(174, 188, 185, 0.3), 0px 4px 5px rgba(174, 188, 185, 0.3), 0px -4px 5px rgba(174, 188, 185, 0.3), 0px 0px 40px rgba(174, 188, 185, 0.2);
+}
+
+#fractalContainer {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px rgba(138, 43, 226, 0.5), 0px 0px 60px rgba(75, 0, 130, 0.3);
+  position: relative;
+}
+
+#interactiveFractal {
+  display: block;
+  border-radius: 50%;
+}
+
+/* Navbar styles */
+.nav {
+  background-color: rgba(21, 21, 21, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Raleway", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #aebcb9;
+}
+
+.nav a.active {
+  color: white;
+}
+
+.nav #logo {
+  float: left;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+.nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Text rotation animation */
+.cd-headline {
+  font-size: 2.5em;
+  line-height: 1.55em;
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+
+.rotate-1 .cd-words-wrapper {
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  perspective: 300px;
+}
+
+.rotate-1 .cd-words-wrapper b {
+  opacity: 0;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.rotate-1 .cd-words-wrapper b.is-visible {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.rotate-1 .cd-words-wrapper b.is-hidden {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Helen Yu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fractals.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/fractals.js"></script>
+  <script language="javascript" src="JS/animations.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Helen Yu </a>
+      <a href="science.html">Science</a>
+      <a href="art.html">Art</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; height: 100%;">
+      <canvas id="fractalCanvas"> </canvas>
+      <div class="container" id="titlecontainer">
+        <div id = "left" style=" margin-right:30px;">
+        	<div class="Hello"> L </div>
+        	<div id="Name"> I am </div>
+        	<div id="Iam"> 
+            <span class="cd-headline rotate-1">
+              <span class="cd-words-wrapper"> 
+                <b class="is-visible">an innovator</b>
+                <b>a creator</b>
+                <b>an explorer</b> 
+              </span> 
+            </span>
+          </div> 
+        </div>       
+        <div id = "right" >
+          <div id="fractalContainer">
+            <canvas id="interactiveFractal" width="300" height="300"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+</body> 
+</html>
