@@ -28,10 +28,11 @@
  <!-- NAVBAR -->
     <div class="nav" id="navbar">
       <a href="javascript:void(0);" id="logo"> Helen Yu </a>
-      <a href="fairy-ring.html" class="active">Fairy Ring</a>
+      <a href="index.html">Home</a>
       <a href="art.html">Art</a>
       <a href="science.html">Science</a>
-      <a href="index.html">Home</a>
+      <a href="fairy-ring.html" class="active">Fairy Ring</a>
+      <a href="games.html">Games</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
@@ -52,17 +53,64 @@
       <div class="container" style="padding-top: 15%; max-width: 1000px;">
         <div style="text-align: center; margin-bottom: 50px;">
           <div class="Hello" style="text-align: center;"> Fairy Ring </div>
-          <div id="Name" style="font-size: 3em; text-align: center;"> Patron Piece </div>
+          <div id="Name" style="font-size: 3em; text-align: center;"> Natural Philosophy & Art </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
+          <div class="fairy-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Mycelial Networks</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Exploring the hidden connections beneath our feet. Mycelial networks represent 
+              nature's internet—vast underground systems that transport nutrients, information, 
+              and consciousness through forest ecosystems.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="fairyFractal1" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Systems Thinking • 2026
+            </div>
+          </div>
+          
+          <div class="fairy-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Sacred Geometry</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              The mathematical patterns that govern natural growth. Fairy rings embody 
+              perfect circular expansion, radial symmetry, and the golden ratio—principles 
+              that repeat throughout nature from atoms to galaxies.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="fairyFractal2" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Natural Mathematics • 2026
+            </div>
+          </div>
+          
+          <div class="fairy-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Transformation & Decay</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              The essential cycle of death and rebirth in nature. Fungi are nature's 
+              great recyclers, breaking down the old to make way for new growth—a powerful 
+              metaphor for personal and societal transformation.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="fairyFractal3" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Ecological Philosophy • 2026
+            </div>
+          </div>
         </div>
         
         <div class="patron-piece" style="background: rgba(21, 21, 21, 0.8); padding: 50px; border-radius: 15px; margin-bottom: 50px; border: 1px solid rgba(138, 43, 226, 0.3);">
+          <h3 style="color: white; margin-bottom: 15px; text-align: center; font-size: 1.8em;">Patron Piece: Hand-Stitched Mushroom Hat</h3>
+          
           <div style="text-align: center; margin-bottom: 40px;">
             <div style="width: 100%; max-width: 400px; height: 300px; background: linear-gradient(135deg, #2a1a3a, #4a2a5a); border-radius: 15px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
               <span style="color: white; font-size: 5em;">🍄</span>
             </div>
-            <h2 style="color: white; margin-top: 30px; margin-bottom: 15px; font-size: 2em;">Hand-Stitched Mushroom Hat</h2>
-            <div style="color: #aebcb9; font-size: 1.2em; margin-bottom: 10px;">One-of-One Wearable Artifact</div>
-            <div style="color: #666; font-size: 1.1em; margin-bottom: 30px;">$400</div>
+            <div style="color: #aebcb9; font-size: 1.2em; margin-bottom: 10px;">One-of-One Wearable Artifact • $400</div>
           </div>
           
           <div style="color: #aebcb9; line-height: 1.7em; font-size: 1em; margin-bottom: 30px;">
@@ -99,6 +147,21 @@
               An act of alignment, not a transaction
             </div>
           </div>
+        </div>
+        
+        <div style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px;">
+          <h3 style="color: white; margin-bottom: 15px;">About Fairy Ring Philosophy</h3>
+          <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+            Fairy Ring explores the intersection of natural phenomena, artistic expression, and philosophical inquiry. 
+            Just as mycelial networks connect vast forest ecosystems underground, this work connects 
+            disparate fields—art, science, technology, and human experience—into a unified whole.
+          </p>
+          <p style="color: #aebcb9; line-height: 1.6em;">
+            The fairy ring itself serves as a powerful metaphor: a perfect circle of growth that appears 
+            mysteriously, expands systematically, and eventually returns to the earth. It represents 
+            the cyclical nature of knowledge, the interconnectedness of all things, and the beauty 
+            that emerges from processes both visible and invisible to the human eye.
+          </p>
         </div>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
@@ -259,9 +322,144 @@
     </div>
 
     <script>
-      // Fairy Ring Mushroom Hat Shop
-      // Cart functionality could be added here
-      console.log("Welcome to Fairy Ring Mushroom Hat Shop!");
+      function initFairyFractals() {
+        // Fairy fractal 1 - Mycelial network pattern
+        const canvas1 = document.getElementById('fairyFractal1');
+        if (canvas1) {
+          const ctx1 = canvas1.getContext('2d');
+          drawFairyPattern1(ctx1, canvas1.width, canvas1.height);
+        }
+        
+        // Fairy fractal 2 - Sacred geometry
+        const canvas2 = document.getElementById('fairyFractal2');
+        if (canvas2) {
+          const ctx2 = canvas2.getContext('2d');
+          drawFairyPattern2(ctx2, canvas2.width, canvas2.height);
+        }
+        
+        // Fairy fractal 3 - Transformation cycle
+        const canvas3 = document.getElementById('fairyFractal3');
+        if (canvas3) {
+          const ctx3 = canvas3.getContext('2d');
+          drawFairyPattern3(ctx3, canvas3.width, canvas3.height);
+        }
+      }
+      
+      function drawFairyPattern1(ctx, width, height) {
+        let time = 0;
+        
+        function draw() {
+          time += 0.01;
+          ctx.fillStyle = 'rgba(10, 20, 40, 0.05)';
+          ctx.fillRect(0, 0, width, height);
+          
+          const centerX = width / 2;
+          const centerY = height / 2;
+          
+          // Draw expanding circles
+          for (let i = 0; i < 5; i++) {
+            const radius = (time * 20 + i * 30) % 120;
+            const alpha = Math.max(0, 1 - radius / 120);
+            
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(100, 200, 150, ${alpha * 0.6})`;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          }
+          
+          // Draw scattered points
+          for (let i = 0; i < 20; i++) {
+            const angle = (Math.PI * 2 / 20) * i + time * 0.5;
+            const radius = 60 + Math.sin(time + i * 0.3) * 30;
+            const x = centerX + Math.cos(angle) * radius;
+            const y = centerY + Math.sin(angle) * radius;
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = `hsla(${150 + Math.sin(time + i) * 30}, 70%, 60%, 0.8)`;
+            ctx.fill();
+          }
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      function drawFairyPattern2(ctx, width, height) {
+        // Create spiral pattern
+        const gradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.max(width, height)/2);
+        gradient.addColorStop(0, '#0a1420');
+        gradient.addColorStop(0.5, '#1a2a40');
+        gradient.addColorStop(1, '#2a3a50');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+        
+        let time = 0;
+        
+        function draw() {
+          time += 0.02;
+          
+          ctx.fillStyle = 'rgba(10, 20, 32, 0.02)';
+          ctx.fillRect(0, 0, width, height);
+          
+          const centerX = width / 2;
+          const centerY = height / 2;
+          
+          for (let i = 0; i < 50; i++) {
+            const angle = i * 0.3 + time;
+            const radius = i * 3;
+            const x = centerX + Math.cos(angle) * radius;
+            const y = centerY + Math.sin(angle) * radius;
+            
+            if (x > 0 && x < width && y > 0 && y < height) {
+              const size = 2 + Math.sin(time * 3 + i * 0.1) * 1;
+              ctx.beginPath();
+              ctx.arc(x, y, size, 0, Math.PI * 2);
+              ctx.fillStyle = `hsla(${120 + i * 2}, 60%, 50%, 0.7)`;
+              ctx.fill();
+            }
+          }
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      function drawFairyPattern3(ctx, width, height) {
+        let time = 0;
+        
+        function draw() {
+          time += 0.015;
+          
+          ctx.fillStyle = 'rgba(15, 25, 35, 0.03)';
+          ctx.fillRect(0, 0, width, height);
+          
+          // Draw organic pattern
+          for (let x = 10; x < width; x += 20) {
+            for (let y = 10; y < height; y += 20) {
+              const distance = Math.sqrt(Math.pow(x - width/2, 2) + Math.pow(y - height/2, 2));
+              const wave = Math.sin(distance * 0.05 - time * 2);
+              const size = 3 + wave * 2;
+              
+              if (wave > 0.3) {
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${180 + wave * 60}, 70%, 60%, ${wave * 0.8})`;
+                ctx.fill();
+              }
+            }
+          }
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      window.addEventListener('load', initFairyFractals);
     </script>
 </body> 
 </html>

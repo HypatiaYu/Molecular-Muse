@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games - Helen Yu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fractals.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/fractals.js"></script>
+  <script language="javascript" src="JS/animations.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Helen Yu </a>
+      <a href="index.html">Home</a>
+      <a href="art.html">Art</a>
+      <a href="science.html">Science</a>
+      <a href="fairy-ring.html">Fairy Ring</a>
+      <a href="games.html" class="active">Games</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; min-height: 100vh;">
+      <canvas id="fractalCanvas"> </canvas>
+      
+      <div class="container" style="padding-top: 15%; max-width: 1000px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <div class="Hello" style="text-align: center;"> Games </div>
+          <div id="Name" style="font-size: 3em; text-align: center;"> Interactive Experiences </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
+          <div class="game-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Fractal Explorer</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Interactive exploration of mathematical beauty. Navigate through infinite 
+              zooming fractals, discover hidden patterns, and create your own 
+              mathematical artwork through real-time manipulation.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="gameCanvas1" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Interactive Fractal • 2026
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Play Now
+              </button>
+            </div>
+          </div>
+          
+          <div class="game-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Molecular Builder</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Learn chemistry through play. Build molecular structures, explore 
+              chemical bonds, and discover how molecules interact in this 
+              educational yet entertaining scientific simulation.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="gameCanvas2" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Educational Game • 2026
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Play Now
+              </button>
+            </div>
+          </div>
+          
+          <div class="game-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Fairy Ring Quest</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              A mystical journey through enchanted forests. Solve puzzles, 
+              collect magical mushrooms, and uncover the secrets of 
+              mycelial networks in this atmospheric adventure.
+            </p>
+            <div style="margin-top: 20px;">
+              <canvas id="gameCanvas3" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Adventure Game • 2026
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Play Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px;">
+          <h3 style="color: white; margin-bottom: 15px;">About the Games</h3>
+          <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+            These interactive experiences bridge the gap between art, science, and entertainment. 
+            Each game is designed to engage curiosity while teaching fundamental concepts 
+            from mathematics, chemistry, and natural philosophy.
+          </p>
+          <p style="color: #aebcb9; line-height: 1.6em;">
+            Whether you're exploring infinite fractals, building molecular structures, or 
+            journeying through mystical forests, these games offer opportunities for 
+            discovery, learning, and creative expression through interactive play.
+          </p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+          <div style="color: #666; font-size: 0.9em;">
+            <p>© 2026 Helen Yu | Interactive Experiences</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function initGameCanvases() {
+        // Game canvas 1 - Fractal explorer
+        const canvas1 = document.getElementById('gameCanvas1');
+        if (canvas1) {
+          const ctx1 = canvas1.getContext('2d');
+          drawGamePattern1(ctx1, canvas1.width, canvas1.height);
+        }
+        
+        // Game canvas 2 - Molecular builder
+        const canvas2 = document.getElementById('gameCanvas2');
+        if (canvas2) {
+          const ctx2 = canvas2.getContext('2d');
+          drawGamePattern2(ctx2, canvas2.width, canvas2.height);
+        }
+        
+        // Game canvas 3 - Fairy ring quest
+        const canvas3 = document.getElementById('gameCanvas3');
+        if (canvas3) {
+          const ctx3 = canvas3.getContext('2d');
+          drawGamePattern3(ctx3, canvas3.width, canvas3.height);
+        }
+      }
+      
+      function drawGamePattern1(ctx, width, height) {
+        // Animated fractal pattern
+        let time = 0;
+        
+        function draw() {
+          time += 0.02;
+          ctx.fillStyle = 'rgba(20, 10, 40, 0.05)';
+          ctx.fillRect(0, 0, width, height);
+          
+          const centerX = width / 2;
+          const centerY = height / 2;
+          
+          for (let i = 0; i < 8; i++) {
+            const angle = (Math.PI * 2 / 8) * i + time;
+            const radius = 30 + Math.sin(time + i * 0.5) * 20;
+            const x = centerX + Math.cos(angle) * radius;
+            const y = centerY + Math.sin(angle) * radius;
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 3 + Math.sin(time * 2 + i) * 2, 0, Math.PI * 2);
+            ctx.fillStyle = `hsla(${280 + i * 20}, 70%, 60%, 0.8)`;
+            ctx.fill();
+          }
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      function drawGamePattern2(ctx, width, height) {
+        // Molecular structure animation
+        let time = 0;
+        
+        function draw() {
+          time += 0.03;
+          ctx.fillStyle = 'rgba(10, 20, 50, 0.08)';
+          ctx.fillRect(0, 0, width, height);
+          
+          // Draw molecular connections
+          for (let i = 0; i < 6; i++) {
+            const angle = (Math.PI * 2 / 6) * i;
+            const radius = 50;
+            const x = width/2 + Math.cos(angle) * radius;
+            const y = height/2 + Math.sin(angle) * radius;
+            
+            // Connection to center
+            ctx.beginPath();
+            ctx.moveTo(width/2, height/2);
+            ctx.lineTo(x, y);
+            ctx.strokeStyle = `hsla(220, 60%, 50%, 0.5)`;
+            ctx.stroke();
+            
+            // Atom
+            ctx.beginPath();
+            ctx.arc(x, y, 8, 0, Math.PI * 2);
+            ctx.fillStyle = `hsla(200, 70%, 60%, 0.9)`;
+            ctx.fill();
+          }
+          
+          // Center atom
+          ctx.beginPath();
+          ctx.arc(width/2, height/2, 10, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(180, 80%, 70%, 0.9)`;
+          ctx.fill();
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      function drawGamePattern3(ctx, width, height) {
+        // Fairy ring mystical pattern
+        let time = 0;
+        
+        function draw() {
+          time += 0.015;
+          ctx.fillStyle = 'rgba(10, 30, 20, 0.06)';
+          ctx.fillRect(0, 0, width, height);
+          
+          const centerX = width / 2;
+          const centerY = height / 2;
+          
+          // Draw expanding fairy rings
+          for (let i = 0; i < 4; i++) {
+            const radius = (time * 15 + i * 40) % 100;
+            const alpha = Math.max(0, 1 - radius / 100);
+            
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(150, 250, 150, ${alpha * 0.6})`;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          }
+          
+          // Draw mystical particles
+          for (let i = 0; i < 15; i++) {
+            const angle = (Math.PI * 2 / 15) * i + time * 0.3;
+            const radius = 40 + Math.sin(time * 2 + i * 0.4) * 20;
+            const x = centerX + Math.cos(angle) * radius;
+            const y = centerY + Math.sin(angle) * radius;
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = `hsla(${120 + Math.sin(time + i) * 40}, 80%, 70%, 0.9)`;
+            ctx.fill();
+          }
+          
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+      }
+      
+      window.addEventListener('load', initGameCanvases);
+    </script>
+</body> 
+</html>
