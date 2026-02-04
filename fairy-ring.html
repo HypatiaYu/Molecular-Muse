@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fairy Ring - Helen Yu</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/fractals.css">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Georgia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- SCRIPTS and LIBRARIES -->
+  <script language="javascript" src="JS/fractals.js"></script>
+  <script language="javascript" src="JS/animations.js"></script>
+
+ </head>
+
+<body>
+ <!-- NAVBAR -->
+    <div class="nav" id="navbar">
+      <a href="javascript:void(0);" id="logo"> Helen Yu </a>
+      <a href="fairy-ring.html" class="active">Fairy Ring</a>
+      <a href="art.html">Art</a>
+      <a href="science.html">Science</a>
+      <a href="index.html">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+    </script>
+
+    <div style="position: relative; min-height: 100vh;">
+      <canvas id="fractalCanvas"> </canvas>
+      
+      <div class="container" style="padding-top: 15%; max-width: 1000px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <div class="Hello" style="text-align: center;"> Fairy Ring </div>
+          <div id="Name" style="font-size: 3em; text-align: center;"> Patron Piece </div>
+        </div>
+        
+        <div class="patron-piece" style="background: rgba(21, 21, 21, 0.8); padding: 50px; border-radius: 15px; margin-bottom: 50px; border: 1px solid rgba(138, 43, 226, 0.3);">
+          <div style="text-align: center; margin-bottom: 40px;">
+            <div style="width: 100%; max-width: 400px; height: 300px; background: linear-gradient(135deg, #2a1a3a, #4a2a5a); border-radius: 15px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+              <span style="color: white; font-size: 5em;">🍄</span>
+            </div>
+            <h2 style="color: white; margin-top: 30px; margin-bottom: 15px; font-size: 2em;">Hand-Stitched Mushroom Hat</h2>
+            <div style="color: #aebcb9; font-size: 1.2em; margin-bottom: 10px;">One-of-One Wearable Artifact</div>
+            <div style="color: #666; font-size: 1.1em; margin-bottom: 30px;">$400</div>
+          </div>
+          
+          <div style="color: #aebcb9; line-height: 1.7em; font-size: 1em; margin-bottom: 30px;">
+            <p style="margin-bottom: 20px;">
+              This mushroom hat is a hand-stitched, one-of-one wearable artifact created as a patron piece rather than a commercial object. Each piece is constructed entirely from upcycled materials, ensuring that no two works can ever be replicated. The specific materials, histories, and markings embedded in this object make it the only version of itself that will ever exist — a true singular creation born from intention and care.
+            </p>
+            
+            <p style="margin-bottom: 20px;">
+              I'm offering this hat at a $400 price point to support ongoing work at the intersection of art, technology, and human well-being. I invented technology that teaches software how to draw novel molecules the way an artist learns to draw, with the goal of helping discover better treatments for mental illness — including healing that I experienced myself through therapeutic use of psychedelics.
+            </p>
+            
+            <p style="margin-bottom: 20px;">
+              My intention is to develop new, improved versions of existing compounds that can help people who currently can't access the medicines they need. Many classic psychedelic compounds are off-patent and cannot be protected through traditional intellectual property rights, making them difficult to commercialize under the current venture-capital model that depends on exclusivity and predictable profits. At the same time, the people who could benefit most from these therapies are often underserved and priced out of access.
+            </p>
+            
+            <p style="margin-bottom: 20px;">
+              This object is not optimized for reproduction — its value lies in the time embedded in the hand stitching, the intentional irregularities of the maker's hand, and the symbolic weight of the mushroom as a form: growth through unseen networks, intelligence beneath the surface, and transformation through reuse and recombination.
+            </p>
+            
+            <p style="margin-bottom: 20px;">
+              As a patron piece, this work represents an act of alignment rather than a transaction. Your acquisition supports the continuation of experimental, cross-disciplinary practice — where art, technology, sustainability, and human care quietly influence one another outside traditional market pressures.
+            </p>
+            
+            <p>
+              Ownership confers stewardship. This object is intended to be worn, appreciated, and remembered as evidence of a moment when discarded materials were transformed into meaning, and when belief in an idea preceded its widespread recognition.
+            </p>
+          </div>
+          
+          <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(138, 43, 226, 0.3);">
+            <button style="background: rgba(138, 43, 226, 0.7); color: white; border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 1.1em; transition: all 0.3s ease;">
+              Become a Patron
+            </button>
+            <div style="color: #666; font-size: 0.9em; margin-top: 15px;">
+              An act of alignment, not a transaction
+            </div>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
+          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Classic Amanita</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              The iconic red cap with white spots. Handcrafted with attention 
+              to detail, this timeless design brings the magic of fairy tales 
+              to life. Perfect for festivals, costume parties, and magical adventures.
+            </p>
+            <div style="margin-top: 20px;">
+              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #8b0000, #ff6b6b); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white; font-size: 3em;">🍄</span>
+              </div>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Handmade • $45
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Forest Floor</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Earthy tones and natural textures. This mushroom hat captures the 
+              subtle beauty of fungi found in deep forests. Made with sustainable 
+              materials and natural dyes for an authentic woodland feel.
+            </p>
+            <div style="margin-top: 20px;">
+              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #3d2817, #8b6239); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white; font-size: 3em;">🟤</span>
+              </div>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Sustainable • $55
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Bioluminescent Glow</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Mystical mushroom hat that glows in the dark. Features phosphorescent 
+              materials that absorb light during the day and emit an ethereal glow 
+              at night. Perfect for evening events and mystical gatherings.
+            </p>
+            <div style="margin-top: 20px;">
+              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #001a00, #66ff66); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white; font-size: 3em;">✨</span>
+              </div>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Special Edition • $65
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Psychedelic Dream</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Vibrant colors and flowing patterns. This eye-catching mushroom hat 
+              features bold, psychedelic designs that shift and change with the light. 
+              A statement piece for festivals and creative expression.
+            </p>
+            <div style="margin-top: 20px;">
+              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white; font-size: 3em;">🌈</span>
+              </div>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Artisan Design • $75
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Mini Fungi</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Delicate smaller mushroom hat. Perfect for children or those who prefer 
+              a more subtle magical touch. Features intricate details and comes in 
+              various mushroom species designs.
+            </p>
+            <div style="margin-top: 20px;">
+              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #ffdb58, #ffa500); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white; font-size: 3em;">🎩</span>
+              </div>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Kids Size • $35
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
+            <h3 style="color: white; margin-bottom: 15px;">Giant Cap</h3>
+            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+              Oversized statement mushroom hat. Features an extra-large cap that 
+              creates dramatic shadow and presence. Made with lightweight materials 
+              for comfortable wear despite the impressive size.
+            </p>
+            <div style="margin-top: 20px;">
+              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #4b0082, #8a2be2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white; font-size: 3em;">🎭</span>
+              </div>
+            </div>
+            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
+              Large Size • $85
+            </div>
+            <div style="margin-top: 15px;">
+              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px;">
+          <h3 style="color: white; margin-bottom: 15px;">About Fairy Ring Mushroom Hats</h3>
+          <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
+            Welcome to Fairy Ring, where magic meets craftsmanship. Each mushroom hat is carefully 
+            handcrafted with attention to detail and love for the mystical world of fungi. Our hats 
+            are designed to bring a touch of enchantment to your everyday adventures.
+          </p>
+          <p style="color: #aebcb9; line-height: 1.6em;">
+            Whether you're attending a festival, exploring nature, or simply want to add a bit of 
+            whimsy to your day, our mushroom hats are perfect for expressing your connection to 
+            the natural world and the magical realm of fairy tales. Each piece is unique, just like 
+            the mushrooms that inspire them.
+          </p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+          <div style="color: #666; font-size: 0.9em;">
+            <p>© 2026 Helen Yu | Natural Phenomena</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Fairy Ring Mushroom Hat Shop
+      // Cart functionality could be added here
+      console.log("Welcome to Fairy Ring Mushroom Hat Shop!");
+    </script>
+</body> 
+</html>
