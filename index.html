@@ -22,6 +22,28 @@
   <script language="javascript" src="JS/fractals.js"></script>
   <script language="javascript" src="JS/animations.js"></script>
 
+  <!-- AUDIO -->
+  <audio id="bgMusic" autoplay loop muted>
+    <source src="music/molecular_muse.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.getElementById('bgMusic');
+      
+      // Unmute after user interaction
+      document.body.addEventListener('click', function() {
+        audio.muted = false;
+        audio.play().catch(e => console.log('Autoplay prevented:', e));
+      }, { once: true });
+      
+      // Try to play immediately
+      audio.play().catch(e => {
+        console.log('Autoplay prevented, waiting for user interaction');
+      });
+    });
+  </script>
+
  </head>
 
 <body>
