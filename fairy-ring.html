@@ -21,6 +21,7 @@
   <!-- SCRIPTS and LIBRARIES -->
   <script language="javascript" src="JS/fractals.js"></script>
   <script language="javascript" src="JS/animations.js"></script>
+
   <!-- AUDIO -->
   <audio id="bgMusic" loop>
     <source src="music/molecular_muse.mp3" type="audio/mpeg">
@@ -58,266 +59,109 @@
       <div class="container" style="padding-top: 15%; max-width: 1000px;">
         <div style="text-align: center; margin-bottom: 50px;">
           <div class="Hello" style="text-align: center;"> Fairy Ring </div>
-          <div id="Name" style="font-size: 3em; text-align: center;"> Natural Philosophy & Art </div>
+          <div id="Name" style="font-size: 3em; text-align: center;"> Patron Piece </div>
         </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
-          <div class="fairy-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Mycelial Networks</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              Exploring the hidden connections beneath our feet. Mycelial networks represent 
-              nature's internet—vast underground systems that transport nutrients, information, 
-              and consciousness through forest ecosystems.
-            </p>
-            <div style="margin-top: 20px;">
-              <canvas id="fairyFractal1" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Systems Thinking • 2026
-            </div>
-          </div>
-          
-          <div class="fairy-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Sacred Geometry</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              The mathematical patterns that govern natural growth. Fairy rings embody 
-              perfect circular expansion, radial symmetry, and the golden ratio—principles 
-              that repeat throughout nature from atoms to galaxies.
-            </p>
-            <div style="margin-top: 20px;">
-              <canvas id="fairyFractal2" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Natural Mathematics • 2026
-            </div>
-          </div>
-          
-          <div class="fairy-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Transformation & Decay</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              The essential cycle of death and rebirth in nature. Fungi are nature's 
-              great recyclers, breaking down the old to make way for new growth—a powerful 
-              metaphor for personal and societal transformation.
-            </p>
-            <div style="margin-top: 20px;">
-              <canvas id="fairyFractal3" width="290" height="200" style="width: 100%; border-radius: 10px;"></canvas>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Ecological Philosophy • 2026
-            </div>
-          </div>
-        </div>
-        
+
         <div class="patron-piece" style="background: rgba(21, 21, 21, 0.8); padding: 50px; border-radius: 15px; margin-bottom: 50px; border: 1px solid rgba(138, 43, 226, 0.3);">
           <h3 style="color: white; margin-bottom: 15px; text-align: center; font-size: 1.8em;">Patron Piece: Hand-Stitched Mushroom Hat</h3>
-          
+
           <div style="text-align: center; margin-bottom: 40px;">
-            <div style="width: 100%; max-width: 400px; height: 300px; background: linear-gradient(135deg, #2a1a3a, #4a2a5a); border-radius: 15px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-              <span style="color: white; font-size: 5em;">🍄</span>
+            <div id="patronCarousel" style="position: relative; max-width: 340px; margin: 0 auto;">
+              <div style="overflow: hidden; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.35);">
+                <img class="carousel-slide" src="Images/mushroom_hat.jpg" alt="Hand-stitched mushroom hat" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9139.jpeg" alt="Mushroom workshop photo 1" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9151.jpeg" alt="Mushroom workshop photo 2" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9154.jpeg" alt="Mushroom workshop photo 3" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9156.jpeg" alt="Mushroom workshop photo 4" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9159.jpeg" alt="Mushroom workshop photo 5" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9160.jpeg" alt="Mushroom workshop photo 6" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9162.jpeg" alt="Mushroom workshop photo 7" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9166.jpeg" alt="Mushroom workshop photo 8" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9168.jpeg" alt="Mushroom workshop photo 9" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+                <img class="carousel-slide" src="Images/mushroom_workshop/IMG_9170.jpeg" alt="Mushroom workshop photo 10" style="width: 100%; height: 320px; object-fit: cover; display: none;">
+              </div>
+
+              <button id="carouselPrev" type="button" style="position: absolute; top: 50%; left: -12px; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(0, 0, 0, 0.65); color: #fff; cursor: pointer;">&#10094;</button>
+              <button id="carouselNext" type="button" style="position: absolute; top: 50%; right: -12px; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(0, 0, 0, 0.65); color: #fff; cursor: pointer;">&#10095;</button>
+
+              <div id="patronCarouselDots" style="display: flex; justify-content: center; gap: 7px; margin-top: 12px;"></div>
             </div>
-            <div style="color: #aebcb9; font-size: 1.2em; margin-bottom: 10px;">One-of-One Wearable Artifact • $400</div>
+
+            <div style="color: #aebcb9; font-size: 1.2em; margin-top: 14px; margin-bottom: 10px;">One-of-One Wearable Artifact</div>
           </div>
-          
+
           <div style="color: #aebcb9; line-height: 1.7em; font-size: 1em; margin-bottom: 30px;">
             <p style="margin-bottom: 20px;">
-              This mushroom hat is a hand-stitched, one-of-one wearable artifact created as a patron piece rather than a commercial object. Each piece is constructed entirely from upcycled materials, ensuring that no two works can ever be replicated. The specific materials, histories, and markings embedded in this object make it the only version of itself that will ever exist — a true singular creation born from intention and care.
+              Earlier in my life, I became seriously ill. Surviving that illness gave me a second chance, and it changed the direction of my life. After that experience, I realized that what I really wanted to become was a kind of healer.
             </p>
-            
+
             <p style="margin-bottom: 20px;">
-              I'm offering this hat at a $400 price point to support ongoing work at the intersection of art, technology, and human well-being. I invented technology that teaches software how to draw novel molecules the way an artist learns to draw, with the goal of helping discover better treatments for mental illness — including healing that I experienced myself through therapeutic use of psychedelics.
+              Later, when I spent time at Stanford, I would often look out from the hill and see the streets below filled with people experiencing homelessness. It created a strange contrast. Up on the hill were some of the most advanced institutions in the world, full of knowledge and resources. But looking out at the city, it sometimes felt empty -- because the people who needed help the most were still outside that system.
             </p>
-            
+
             <p style="margin-bottom: 20px;">
-              My intention is to develop new, improved versions of existing compounds that can help people who currently can't access the medicines they need. Many classic psychedelic compounds are off-patent and cannot be protected through traditional intellectual property rights, making them difficult to commercialize under the current venture-capital model that depends on exclusivity and predictable profits. At the same time, the people who could benefit most from these therapies are often underserved and priced out of access.
+              That's when something became very clear to me. The reason I survived my illness and got a second chance was simple: I had access to medicine. Many others don't.
             </p>
-            
+
             <p style="margin-bottom: 20px;">
-              This object is not optimized for reproduction — its value lies in the time embedded in the hand stitching, the intentional irregularities of the maker's hand, and the symbolic weight of the mushroom as a form: growth through unseen networks, intelligence beneath the surface, and transformation through reuse and recombination.
+              That realization motivated me to invent Frame -- a technology designed to help discover new medicines and make treatments more accessible, especially for people struggling with mental illness.
             </p>
-            
+
             <p style="margin-bottom: 20px;">
-              As a patron piece, this work represents an act of alignment rather than a transaction. Your acquisition supports the continuation of experimental, cross-disciplinary practice — where art, technology, sustainability, and human care quietly influence one another outside traditional market pressures.
+              But the way medicine is funded today creates challenges. Many of the compounds that could help people most -- including psychedelic compounds used in mental health treatment -- are off-patent. Because they cannot be easily owned or monopolized, they are often difficult to develop within traditional venture-capital systems that depend on exclusivity and predictable profits.
             </p>
-            
+
+            <p style="margin-bottom: 20px;">
+              So I'm trying a different path.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              Instead of relying entirely on traditional investors, I'm inviting people to support the work directly.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              The mushroom hat you see here is part of that effort.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              I created it after running a workshop at Burning Man inspired by mushrooms -- symbols of life, renewal, and hidden intelligence. Mushrooms are also the source of powerful medicines found in nature. Compounds like psilocybin have shown real potential to help people heal from deep mental illness.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              This hat is a hand-stitched, one-of-one wearable artifact, made entirely from upcycled materials. Every piece I make carries its own history through the materials used, the marks of the maker's hand, and the time embedded in the stitching. Because of that, no two pieces can ever be replicated.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              The mushroom itself represents growth through unseen networks, regeneration, and transformation. Just as mycelium spreads quietly beneath the surface before anything appears above ground, new forms of healing and discovery often begin invisibly before they change the world.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              This object is offered as a patron piece -- a way to support ongoing work at the intersection of art, technology, and human well-being.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              Your support helps me continue developing tools that teach software how to design new molecules the way an artist learns to draw -- exploring new possibilities for medicines that could help people who currently cannot access the treatments they need.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+              Ownership of this piece is less about a transaction and more about stewardship -- supporting a vision where art, science, and healing grow together outside traditional market pressures.
+            </p>
+
             <p>
-              Ownership confers stewardship. This object is intended to be worn, appreciated, and remembered as evidence of a moment when discarded materials were transformed into meaning, and when belief in an idea preceded its widespread recognition.
+              If this story resonates with you, I invite you to support the work and help make new forms of medicine accessible to the people who need them most.
             </p>
           </div>
-          
+
           <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(138, 43, 226, 0.3);">
             <button style="background: rgba(138, 43, 226, 0.7); color: white; border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 1.1em; transition: all 0.3s ease;">
               Become a Patron
             </button>
             <div style="color: #666; font-size: 0.9em; margin-top: 15px;">
-              An act of alignment, not a transaction
+              Become a patron -- and help make this vision possible.
             </div>
           </div>
         </div>
-        
-        <div style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px;">
-          <h3 style="color: white; margin-bottom: 15px;">About Fairy Ring Philosophy</h3>
-          <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-            Fairy Ring explores the intersection of natural phenomena, artistic expression, and philosophical inquiry. 
-            Just as mycelial networks connect vast forest ecosystems underground, this work connects 
-            disparate fields—art, science, technology, and human experience—into a unified whole.
-          </p>
-          <p style="color: #aebcb9; line-height: 1.6em;">
-            The fairy ring itself serves as a powerful metaphor: a perfect circle of growth that appears 
-            mysteriously, expands systematically, and eventually returns to the earth. It represents 
-            the cyclical nature of knowledge, the interconnectedness of all things, and the beauty 
-            that emerges from processes both visible and invisible to the human eye.
-          </p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
-          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Classic Amanita</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              The iconic red cap with white spots. Handcrafted with attention 
-              to detail, this timeless design brings the magic of fairy tales 
-              to life. Perfect for festivals, costume parties, and magical adventures.
-            </p>
-            <div style="margin-top: 20px;">
-              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #8b0000, #ff6b6b); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                <span style="color: white; font-size: 3em;">🍄</span>
-              </div>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Handmade • $45
-            </div>
-            <div style="margin-top: 15px;">
-              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-          
-          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Forest Floor</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              Earthy tones and natural textures. This mushroom hat captures the 
-              subtle beauty of fungi found in deep forests. Made with sustainable 
-              materials and natural dyes for an authentic woodland feel.
-            </p>
-            <div style="margin-top: 20px;">
-              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #3d2817, #8b6239); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                <span style="color: white; font-size: 3em;">🟤</span>
-              </div>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Sustainable • $55
-            </div>
-            <div style="margin-top: 15px;">
-              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-          
-          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Bioluminescent Glow</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              Mystical mushroom hat that glows in the dark. Features phosphorescent 
-              materials that absorb light during the day and emit an ethereal glow 
-              at night. Perfect for evening events and mystical gatherings.
-            </p>
-            <div style="margin-top: 20px;">
-              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #001a00, #66ff66); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                <span style="color: white; font-size: 3em;">✨</span>
-              </div>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Special Edition • $65
-            </div>
-            <div style="margin-top: 15px;">
-              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-          
-          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Psychedelic Dream</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              Vibrant colors and flowing patterns. This eye-catching mushroom hat 
-              features bold, psychedelic designs that shift and change with the light. 
-              A statement piece for festivals and creative expression.
-            </p>
-            <div style="margin-top: 20px;">
-              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                <span style="color: white; font-size: 3em;">🌈</span>
-              </div>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Artisan Design • $75
-            </div>
-            <div style="margin-top: 15px;">
-              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-          
-          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Mini Fungi</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              Delicate smaller mushroom hat. Perfect for children or those who prefer 
-              a more subtle magical touch. Features intricate details and comes in 
-              various mushroom species designs.
-            </p>
-            <div style="margin-top: 20px;">
-              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #ffdb58, #ffa500); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                <span style="color: white; font-size: 3em;">🎩</span>
-              </div>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Kids Size • $35
-            </div>
-            <div style="margin-top: 15px;">
-              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-          
-          <div class="hat-item fractal-border" style="background: rgba(21, 21, 21, 0.8); padding: 30px; border-radius: 15px;">
-            <h3 style="color: white; margin-bottom: 15px;">Giant Cap</h3>
-            <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-              Oversized statement mushroom hat. Features an extra-large cap that 
-              creates dramatic shadow and presence. Made with lightweight materials 
-              for comfortable wear despite the impressive size.
-            </p>
-            <div style="margin-top: 20px;">
-              <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #4b0082, #8a2be2); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                <span style="color: white; font-size: 3em;">🎭</span>
-              </div>
-            </div>
-            <div style="margin-top: 15px; color: #666; font-size: 0.9em;">
-              Large Size • $85
-            </div>
-            <div style="margin-top: 15px;">
-              <button style="background: rgba(138, 43, 226, 0.6); color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; width: 100%;">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="background: rgba(21, 21, 21, 0.8); padding: 40px; border-radius: 15px; margin-bottom: 30px;">
-          <h3 style="color: white; margin-bottom: 15px;">About Fairy Ring Mushroom Hats</h3>
-          <p style="color: #aebcb9; line-height: 1.6em; margin-bottom: 20px;">
-            Welcome to Fairy Ring, where magic meets craftsmanship. Each mushroom hat is carefully 
-            handcrafted with attention to detail and love for the mystical world of fungi. Our hats 
-            are designed to bring a touch of enchantment to your everyday adventures.
-          </p>
-          <p style="color: #aebcb9; line-height: 1.6em;">
-            Whether you're attending a festival, exploring nature, or simply want to add a bit of 
-            whimsy to your day, our mushroom hats are perfect for expressing your connection to 
-            the natural world and the magical realm of fairy tales. Each piece is unique, just like 
-            the mushrooms that inspire them.
-          </p>
-        </div>
-        
+
         <div style="text-align: center; margin-top: 50px;">
           <div style="color: #666; font-size: 0.9em;">
             <p>© 2026 Helen Yu | Natural Phenomena</p>
@@ -327,144 +171,52 @@
     </div>
 
     <script>
-      function initFairyFractals() {
-        // Fairy fractal 1 - Mycelial network pattern
-        const canvas1 = document.getElementById('fairyFractal1');
-        if (canvas1) {
-          const ctx1 = canvas1.getContext('2d');
-          drawFairyPattern1(ctx1, canvas1.width, canvas1.height);
-        }
-        
-        // Fairy fractal 2 - Sacred geometry
-        const canvas2 = document.getElementById('fairyFractal2');
-        if (canvas2) {
-          const ctx2 = canvas2.getContext('2d');
-          drawFairyPattern2(ctx2, canvas2.width, canvas2.height);
-        }
-        
-        // Fairy fractal 3 - Transformation cycle
-        const canvas3 = document.getElementById('fairyFractal3');
-        if (canvas3) {
-          const ctx3 = canvas3.getContext('2d');
-          drawFairyPattern3(ctx3, canvas3.width, canvas3.height);
-        }
-      }
-      
-      function drawFairyPattern1(ctx, width, height) {
-        let time = 0;
-        
-        function draw() {
-          time += 0.01;
-          ctx.fillStyle = 'rgba(10, 20, 40, 0.05)';
-          ctx.fillRect(0, 0, width, height);
-          
-          const centerX = width / 2;
-          const centerY = height / 2;
-          
-          // Draw expanding circles
-          for (let i = 0; i < 5; i++) {
-            const radius = (time * 20 + i * 30) % 120;
-            const alpha = Math.max(0, 1 - radius / 120);
-            
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-            ctx.strokeStyle = `rgba(100, 200, 150, ${alpha * 0.6})`;
-            ctx.lineWidth = 2;
-            ctx.stroke();
+      (function () {
+        var carousel = document.getElementById('patronCarousel');
+        if (!carousel) return;
+
+        var slides = carousel.querySelectorAll('.carousel-slide');
+        var prev = document.getElementById('carouselPrev');
+        var next = document.getElementById('carouselNext');
+        var dotsWrap = document.getElementById('patronCarouselDots');
+        var activeIndex = 0;
+
+        function showSlide(index) {
+          activeIndex = (index + slides.length) % slides.length;
+
+          for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = i === activeIndex ? 'block' : 'none';
           }
-          
-          // Draw scattered points
-          for (let i = 0; i < 20; i++) {
-            const angle = (Math.PI * 2 / 20) * i + time * 0.5;
-            const radius = 60 + Math.sin(time + i * 0.3) * 30;
-            const x = centerX + Math.cos(angle) * radius;
-            const y = centerY + Math.sin(angle) * radius;
-            
-            ctx.beginPath();
-            ctx.arc(x, y, 2, 0, Math.PI * 2);
-            ctx.fillStyle = `hsla(${150 + Math.sin(time + i) * 30}, 70%, 60%, 0.8)`;
-            ctx.fill();
+
+          var dots = dotsWrap.querySelectorAll('button');
+          for (var j = 0; j < dots.length; j++) {
+            dots[j].style.background = j === activeIndex ? '#fff' : 'rgba(255,255,255,0.35)';
           }
-          
-          requestAnimationFrame(draw);
         }
-        
-        draw();
-      }
-      
-      function drawFairyPattern2(ctx, width, height) {
-        // Create spiral pattern
-        const gradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.max(width, height)/2);
-        gradient.addColorStop(0, '#0a1420');
-        gradient.addColorStop(0.5, '#1a2a40');
-        gradient.addColorStop(1, '#2a3a50');
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, width, height);
-        
-        let time = 0;
-        
-        function draw() {
-          time += 0.02;
-          
-          ctx.fillStyle = 'rgba(10, 20, 32, 0.02)';
-          ctx.fillRect(0, 0, width, height);
-          
-          const centerX = width / 2;
-          const centerY = height / 2;
-          
-          for (let i = 0; i < 50; i++) {
-            const angle = i * 0.3 + time;
-            const radius = i * 3;
-            const x = centerX + Math.cos(angle) * radius;
-            const y = centerY + Math.sin(angle) * radius;
-            
-            if (x > 0 && x < width && y > 0 && y < height) {
-              const size = 2 + Math.sin(time * 3 + i * 0.1) * 1;
-              ctx.beginPath();
-              ctx.arc(x, y, size, 0, Math.PI * 2);
-              ctx.fillStyle = `hsla(${120 + i * 2}, 60%, 50%, 0.7)`;
-              ctx.fill();
-            }
-          }
-          
-          requestAnimationFrame(draw);
+
+        for (var i = 0; i < slides.length; i++) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.style.width = '8px';
+          dot.style.height = '8px';
+          dot.style.borderRadius = '50%';
+          dot.style.border = 'none';
+          dot.style.cursor = 'pointer';
+          dot.style.padding = '0';
+          dot.style.background = 'rgba(255,255,255,0.35)';
+          dot.setAttribute('data-index', String(i));
+          dot.addEventListener('click', function (e) {
+            showSlide(parseInt(e.currentTarget.getAttribute('data-index'), 10));
+          });
+          dotsWrap.appendChild(dot);
         }
-        
-        draw();
-      }
-      
-      function drawFairyPattern3(ctx, width, height) {
-        let time = 0;
-        
-        function draw() {
-          time += 0.015;
-          
-          ctx.fillStyle = 'rgba(15, 25, 35, 0.03)';
-          ctx.fillRect(0, 0, width, height);
-          
-          // Draw organic pattern
-          for (let x = 10; x < width; x += 20) {
-            for (let y = 10; y < height; y += 20) {
-              const distance = Math.sqrt(Math.pow(x - width/2, 2) + Math.pow(y - height/2, 2));
-              const wave = Math.sin(distance * 0.05 - time * 2);
-              const size = 3 + wave * 2;
-              
-              if (wave > 0.3) {
-                ctx.beginPath();
-                ctx.arc(x, y, size, 0, Math.PI * 2);
-                ctx.fillStyle = `hsla(${180 + wave * 60}, 70%, 60%, ${wave * 0.8})`;
-                ctx.fill();
-              }
-            }
-          }
-          
-          requestAnimationFrame(draw);
-        }
-        
-        draw();
-      }
-      
-      window.addEventListener('load', initFairyFractals);
+
+        prev.addEventListener('click', function () { showSlide(activeIndex - 1); });
+        next.addEventListener('click', function () { showSlide(activeIndex + 1); });
+
+        showSlide(0);
+        setInterval(function () { showSlide(activeIndex + 1); }, 5000);
+      })();
     </script>
-</body> 
+</body>
 </html>
